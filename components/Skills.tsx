@@ -43,17 +43,3 @@ export default function Skills({}: Props) {
   );
 }
 
-// import React from "react";
-//
-
-// type Props = {
-//
-// };
-
-// const Skill = (: Props) => {
-//   return (
-//
-//   );
-// };
-
-// export default Skill;
