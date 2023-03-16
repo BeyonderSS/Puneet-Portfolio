@@ -21,20 +21,24 @@ const Projects = (props: Props) => {
         Projects
       </h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
-      {projects.map((project, i) => (
-  <div key={i} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
-    {/* rest of the component code */}
+        {projects.map((project, i) => (
+          <div
+            key={i}
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+          >
+            {/* rest of the component code */}
             <motion.img
               initial={{
                 y: -300,
-                opacity:0
-                }}
-              whileInView={{
-               y:0, opacity:1
+                opacity: 0,
               }}
-             viewport={{
-              once:true
-             }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              viewport={{
+                once: true,
+              }}
               src="https://cdn.sanity.io/images/ltuexkre/production/af7ca99b5a796d0698cf9121a4a0795b5022b6be-666x375.png"
               alt=""
             />
