@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PageInfo } from "@/typings";
+import { urlFor } from "@/sanity";
 
-type Props = {};
+type Props = {pageInfo:PageInfo};
 
-function About({}: Props) {
+function About({pageInfo}: Props) {
   return (
     <motion.div
     initial={{
@@ -35,7 +37,7 @@ function About({}: Props) {
         viewport={{
           once: true,
         }}
-        src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        src={urlFor(pageInfo?.profilePicture).url()}
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[350px] xl:h-[450px] "
       />
       <div className="space-y-10 px-0 md:px-10">
@@ -45,12 +47,7 @@ function About({}: Props) {
           Background
         </h4>
         <p className="text-xs">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
-          ipsa harum natus aperiam magni unde a sunt ut, voluptate molestiae
-          quisquam, doloremque rerum assumenda error voluptatum quos iure!
-          Commodi magni sint minus cumque temporibus odio non ea, molestiae
-          libero? Mollitia, hic similique fuga voluptatum quisquam veniam
-          suscipit earum expedita laborum molestiae ducimus, minus modi!
+          {pageInfo?.backgroundInformation}
         </p>
       </div>
     </motion.div>

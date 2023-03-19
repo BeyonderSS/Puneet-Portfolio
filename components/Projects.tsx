@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-type Props = {};
+import { Project } from "@/typings";
+import { urlFor } from "@/sanity";
+type Props = { projects: Project[] };
 
-const Projects = (props: Props) => {
-  const projects = [1, 2, 3, 4, 5];
+function Projects({ projects }: Props) {
   return (
     <motion.div
       initial={{
@@ -21,7 +22,7 @@ const Projects = (props: Props) => {
         Projects
       </h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20  scrollbar-thin scrollbar-thumb-[#F7AB0A]/80">
-        {projects.map((project, i) => (
+        {projects?.map((project, i) => (
           <div
             key={i}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
@@ -39,7 +40,7 @@ const Projects = (props: Props) => {
               viewport={{
                 once: true,
               }}
-              src="https://cdn.sanity.io/images/ltuexkre/production/af7ca99b5a796d0698cf9121a4a0795b5022b6be-666x375.png"
+              src={urlFor(project?.image).url()}
               alt=""
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
@@ -48,14 +49,20 @@ const Projects = (props: Props) => {
                   {" "}
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}
-                Amazon clone
+                {project?.title}
               </h4>
+              <div className="flex items-center space-x-2 justify-center">
+                {project?.technologies.map((technology) => (
+                  <img
+                    className="h-8 w-8"
+                    key={technology._id}
+                    src={urlFor(technology.image).url()}
+                    alt=""
+                  />
+                ))}
+              </div>
               <p className="text-sm text-center md:text-left">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                itaque! Earum accusamus eum, illo nemo hic vero ipsa amet a
-                distinctio ullam dolore minima sequi, harum beatae. Velit
-                deserunt eligendi veritatis mollitia! Corrupti delectus dicta
-                incidunt quibusdam! Aperiam, dolor incidunt?
+                {project?.summary}
               </p>
             </div>
           </div>
@@ -64,6 +71,6 @@ const Projects = (props: Props) => {
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
     </motion.div>
   );
-};
+}
 
 export default Projects;
