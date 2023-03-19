@@ -1,10 +1,10 @@
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
-type Props = { pageInfo: PageInfo };
 import Link from "next/link";
 import { PageInfo } from "@/typings";
 import { urlFor } from "@/sanity";
+type Props = { pageInfo: PageInfo };
 
 function Hero({pageInfo}: Props) {
   const [text, count] = useTypewriter({

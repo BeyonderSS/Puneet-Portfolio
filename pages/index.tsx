@@ -30,37 +30,30 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <title>{`${pageInfo?.name} - Portfolio`}</title>
       </Head>
 
-      {/* header  */}
-      <div className="sticky top-0">
+      {/* <div className="sticky top-0">
         <Header socials={socials} />
-      </div>
-      {/* hero  */}
+      </div>   */}
+   
       <section id="hero" className="snap-start">
         <Hero pageInfo={pageInfo} />
       </section>
-      {/* about  */}
+
       <section id="about" className="snap-center">
         <About pageInfo={pageInfo} />
       </section>
 
-      {/* experience  */}
       <section id="experience" className="snap-center">
         <WorkExperience experiences={experiences} />
       </section>
-      {/* skills */}
       <section id="skills" className="snap-start">
         <Skills skills={skills} />
       </section>
-
-      {/* projects */}
       <section id="projects" className="snap-start">
         <Projects projects={projects} />
       </section>
-
-      {/* contact Me  */}
       <section className="snap-start">
         <Contact />
-      </section>
+      </section> */}
     </div>
   );
 };
