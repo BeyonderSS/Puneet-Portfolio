@@ -53,7 +53,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
       </section>
       <section className="snap-start">
         <Contact />
-      </section> */}
+      </section> 
     </div>
   );
 };
