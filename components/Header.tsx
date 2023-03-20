@@ -27,7 +27,7 @@ function Header({ socials }: Props) {
           }}
           className="flex flex-row items-center "
         >
-          {/* social icons */}
+       {/* social icon */}
           {socials.map((social) => (
             <SocialIcon
             key={social._id}
@@ -38,8 +38,8 @@ function Header({ socials }: Props) {
           ))}
          
         </motion.div>
-        <Link href="#contact">
           {/* Right Section */}
+        <Link href="#contact" legacyBehavior>
           <motion.div
             initial={{
               x: 500,
