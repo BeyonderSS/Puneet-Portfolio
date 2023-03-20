@@ -30,9 +30,9 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <title>{`${pageInfo?.name} - Portfolio`}</title>
       </Head>
 
-      {/* <div className="sticky top-0">
-        <Header socials={socials} />
-      </div>   */}
+      
+        {/* <Header socials={socials} /> */}
+        
    
       <section id="hero" className="snap-start">
         <Hero pageInfo={pageInfo} />
