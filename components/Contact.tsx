@@ -21,23 +21,23 @@ function Contact({}: Props) {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
-      <div className="flex flex-col space-y-10">
+      <div className="flex flex-col space-y-10 mt-auto">
         <h4 className="text-4xl font-semibold text-center">
           I Have Got Just What You Need.{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk</span>
         </h4>
-        <div className="space-y-10">
+        <div className="space-y-5">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className=" h-7 w-7 animate-pulse text-[#F7AB0A]" />
-            <p className="text-2xl">+917869088589</p>
+            <p className="text-l">+917869088589</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className=" h-7 w-7 animate-pulse text-[#F7AB0A]" />
-            <p className="text-2xl">ssbeyonder@gmail.com</p>
+            <p className="text-l">ssbeyonder@gmail.com</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className=" h-7 w-7 animate-pulse text-[#F7AB0A]" />
-            <p className="text-2xl">123 dev street</p>
+            <p className="text-l">123 dev street</p>
           </div>
         </div>
         <form
