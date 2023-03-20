@@ -28,9 +28,9 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
       <Head>
         <title>{`${pageInfo?.name} - Portfolio`}</title>
       </Head>
-
-      <Header socials={socials} />
-
+      
+        <Header socials={socials} />
+      
       <section id="hero" className="snap-start">
         <Hero pageInfo={pageInfo} />
       </section>
@@ -72,6 +72,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       projects,
       socials,
     },
-    revalidate:10,
+    revalidate: 10,
   };
 };

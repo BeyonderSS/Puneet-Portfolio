@@ -8,7 +8,7 @@ type Props = { socials: Social[] };
 
 function Header({ socials }: Props) {
   return (
-    <div>
+    
       <header className="sticky top-0 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center p-5">
         {/* Left Section */}
         <motion.div
@@ -68,7 +68,7 @@ function Header({ socials }: Props) {
           </motion.div>
         </Link>
       </header>
-    </div>
+    
   );
 }
 
