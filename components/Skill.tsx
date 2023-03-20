@@ -19,7 +19,7 @@ const Skill = ({ skill,directionLeft }: Props) => {
           opacity: 1,
           x: 0,
         }}
-        src={urlFor(skill?.image).url()}
+        src={urlFor(skill.image).url()}
         className="rounded-full border border-gray-400 object-cover w-20 h-20 xl:h-25 xl:w-25 filter group-hover:grayscale transition duration-300 ease-in-out"
       />
       <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white w-20 h-20 xl:h-25 xl:w-25 rounded-full z-0">

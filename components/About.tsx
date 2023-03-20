@@ -37,7 +37,7 @@ function About({pageInfo}: Props) {
         viewport={{
           once: true,
         }}
-        src={urlFor(pageInfo?.profilePicture).url()}
+        src={urlFor(pageInfo.profilePicture).url()}
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[350px] xl:h-[450px] "
       />
       <div className="space-y-10 px-0 md:px-10">
@@ -47,7 +47,7 @@ function About({pageInfo}: Props) {
           Background
         </h4>
         <p className="text-xs">
-          {pageInfo?.backgroundInformation}
+          {pageInfo.backgroundInformation}
         </p>
       </div>
     </motion.div>
