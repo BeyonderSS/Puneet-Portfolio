@@ -49,7 +49,7 @@ const Home = ({ pageInfo,experiences,skills,projects,socials}:Props) => {
         <Projects projects={projects} />
       </section>
       <section id="contact" className="snap-start">
-        <Contact />
+        <Contact pageInfo={pageInfo} />
       </section>
     </div>
   );
