@@ -88,3 +88,4 @@ export async function getServerSideProps () {
     props: {pageInfo,experiences,skills,projects,socials}, // will be passed to the page component as props
   }
 }
+
