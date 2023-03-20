@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -30,10 +29,8 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <title>{`${pageInfo?.name} - Portfolio`}</title>
       </Head>
 
-      
-        {/* <Header socials={socials} /> */}
-        
-   
+      <Header socials={socials} />
+
       <section id="hero" className="snap-start">
         <Hero pageInfo={pageInfo} />
       </section>
@@ -53,14 +50,14 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
       </section>
       <section className="snap-start">
         <Contact />
-      </section> 
+      </section>
     </div>
   );
 };
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperiences();
   const skills: Skill[] = await fetchSkills();
@@ -75,5 +72,6 @@ export const getStaticProps: GetStaticProps = async () => {
       projects,
       socials,
     },
+    revalidate:10,
   };
 };
