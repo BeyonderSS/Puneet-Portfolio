@@ -22,28 +22,28 @@ function Contact({pageInfo}: Props) {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
-      <div className="flex flex-col space-y-10 mt-auto">
-        <h4 className="text-4xl font-semibold text-center">
+      <div className="flex flex-col space-y-10 mt-40">
+        <h4 className="md:text-4xl text-lg  font-semibold text-center">
           I Have Got Just What You Need.{" "}
-          <span className="decoration-[#F7AB0A]/50 underline">Lets Talk</span>
+          <span className="decoration-[#F7AB0A]/50 underline">Lets Talk.</span>
         </h4>
         <div className="space-y-5">
-          <div className="flex items-center space-x-5 justify-center">
+          <div className="flex items-center space-x-1 justify-center">
             <PhoneIcon className=" h-7 w-7 animate-pulse text-[#F7AB0A]" />
             <p className="text-l">+917869088589</p>
           </div>
-          <div className="flex items-center space-x-5 justify-center">
+          <div className="flex items-center space-x-1 justify-center">
             <EnvelopeIcon className=" h-7 w-7 animate-pulse text-[#F7AB0A]" />
             <p className="text-l">{pageInfo.email}</p>
           </div>
-          <div className="flex items-center space-x-5 justify-center">
+          <div className="hidden md:flex items-center space-x-1 justify-center">
             <MapPinIcon className=" h-7 w-7 animate-pulse text-[#F7AB0A]" />
-            <p className="text-l">{pageInfo.address}</p>
+            <p className="text-l ">{pageInfo.address}</p>
           </div>
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fit mx-auto"
+          className="flex flex-col space-y-2 md:w-auto w-96 mx-auto"
         >
           <div className="flex space-x-2">
             <input  {...register("name")} placeholder="Name" className="contactInput" type="text" />
