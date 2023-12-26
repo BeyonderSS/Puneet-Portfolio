@@ -41,11 +41,11 @@ function Contact({pageInfo}: Props) {
             <p className="text-l ">{pageInfo.address}</p>
           </div>
         </div>
-        <form
+        <form 
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col space-y-2 md:w-auto w-96 mx-auto"
         >
-          <div className="flex space-x-2">
+          <div className="flex md:flex-row flex-col space-y-2 md:space-y-0 md:space-x-2">
             <input  {...register("name")} placeholder="Name" className="contactInput" type="text" />
             <input {...register("email")} placeholder="Email" className="contactInput" type="email" />
           </div>
