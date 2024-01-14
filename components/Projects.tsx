@@ -61,14 +61,14 @@ function Projects({ projects }: Props) {
                   />
                 ))}
               </div>
-              <p className="text-sm text-center md:text-left ">
+              <p className="text-sm text-center md:text-left  ">
                 {project.summary}
               </p>
             </div>
           </div>
         ))}
       </div>
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"/>
+      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" />
     </motion.div>
   );
 }
